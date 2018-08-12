@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>require.js プラグイン domReady</title>
+    <script src="js/lib/moment/moment.min.js"></script>
+    <script>
+        window.onload = function() {
+            const m = moment();
+            let msg = m.format() + "\n";
+            msg += m.format("YYYY-MM-DD(ddd) hh:mm:ss.SSS") + "\n";
+
+            const pre = document.createElement("pre");
+            pre.innerText = msg;
+            document.body.appendChild(pre);
+
+            console.log(m);
+            console.log(msg);
+            alert(msg);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
